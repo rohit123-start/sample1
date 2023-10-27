@@ -1,1 +1,211 @@
-Hello guys
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <title>Your Name - Full Stack Developer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: silver;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .about-content, .projects-content{
+            position: relative;
+            z-index: 2; /* Set z-index to control stacking order */
+            background: rgba(0, 0, 0, 0.3); /* Rectangular background opacity and color */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section {
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            padding: 20px;
+        }
+
+        #header {
+            background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/money-2696219_960_720.jpg');
+        }
+
+        #about {
+            background-image: url('https://cdn.pixabay.com/photo/2018/03/27/21/43/startup-3267505_960_720.jpg');
+        }
+
+        #skills {
+            background-image: url('https://cdn.pixabay.com/photo/2017/10/12/22/17/business-2846221_640.jpg');
+        }
+
+        #projects {
+            background-image: url('https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_960_720.jpg');
+        }
+
+        #experience {
+            background-image: url('https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000');
+        }
+
+        .overlay-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+        }
+
+        .developer-image-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .developer-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-content {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #4caf50, #388e3c);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 17px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        .profile-image img {
+            width: 123%;
+            height: 103%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll 5s infinite;
+        }
+
+        .skill {
+            flex: 0 0 100px;
+            padding: 10px;
+            background: #333;
+            border-radius: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(30%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="profile-image">
+            <img src="rohit.jpg" alt="Your Profile Image">
+        </div>
+        <div style="
+            padding-left: 171px;
+            color: #203320;
+            padding-bottom: 48px;
+            padding-top: 26px;
+        ">
+            <h1>Rohit Gajam</h1>
+            <div>Full Stack Developer</div>
+        </div>
+    </header>
+
+    <div id="about" class="section" style="">
+        <div class="overlay-box"></div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>Let's connect and collaborate on exciting projects. Whether you have a vision you'd like to bring to life or you're looking for a developer to enhance your web presence, I'm here to make it happen.</p>
+        </div>
+    </div>
+
+    <div id="skills" class="section">
+        <div class="overlay-box"></div>
+        <h2>Skills</h2>
+        <div class="carousel">
+            <div class="skill">HTML/CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">React</div>
+            <div class="skill">Python</div>
+            <!-- Add more skills -->
+        </div>
+    </div>
+
+    <div id="projects" class="section">
+        <div class="overlay-box"></div>
+        <h2>Projects</h2>
+        <div class="project projects-content">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1 Title</h3>
+            <p>Description of Project 1. Mention your role and technologies used.</p>
+        </div>
+
+        <div class="project projects-content">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project 2 Title</h3>
+            <p>Description of Project 2. Mention your role and technologies used.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+
+    <div id="experience" class="section">
+        <div class="overlay-box"></div>
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>Job Title</h3>
+            <p>Company Name</p>
+            <p>Duration: Month Year - Month Year</p>
+            <ul>
+                <li>Responsibility 1</li>
+                <li>Responsibility 2</li>
+                <!-- Add more responsibilities -->
+            </ul>
+        </div>
+        <!-- Add more job experiences as needed -->
+    </div>
+
+    <footer>
+        <p>Contact me at: your.email@example.com</p>
+    </footer>
+</body>
+</html>
